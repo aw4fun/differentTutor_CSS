@@ -1,0 +1,273 @@
+@import "_button";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	width: 100px;
+	height: 50px;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+.container {
+	width: 980px;
+	margin: 0 auto;
+}
+
+ul {
+	list-style: none;
+}
+
+.uslugi {
+	display: flex;
+	margin: 20px 0;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.uslugi .uslugi__title {
+	text-align: center;
+	font-size: 40px;
+	line-height: 40px;
+	margin: 20px 0;
+	color: #000;
+	width: 100%;
+}
+
+.uslugi .uslugi__title::after {
+	content: "";
+	width: 111px;
+	height: 1px;
+	display: block;
+	background-color: #e7412a;
+	margin: 18px auto;
+}
+
+.uslugi .uslugi__block {
+	width: 50%;
+}
+
+.uslugi .uslugi__block > p {
+	color: #e39e9e;
+	font-size: 30px;
+	line-height: 45px;
+	width: 94%;
+}
+
+.uslugi .uslugi__block > p::after {
+	content: "";
+	background-color: #efeaea;
+	height: 2px;
+	width: 100%;
+	display: block;
+	margin-top: 5px;
+}
+
+.uslugi .uslugi__block--one > p {
+	text-align: right;
+	margin: auto;
+}
+
+.uslugi .uslugi__block--one > p::after {
+	transform: rotate(6deg);
+
+}
+
+.uslugi .uslugi__block--two > p {
+	margin: auto;
+}
+
+.uslugi .uslugi__block--two > p::after {
+	transform: rotate(-6deg);
+	text-align: left;
+}
+
+.uslugi .uslugi__block ul {
+	margin-top: 35px;
+}
+
+
+.uslugi .uslugi__block ul li {
+	margin: 12px 0;
+}
+
+.uslugi .uslugi__block ul li a {
+	font-size: 17px;
+	line-height: 20px;
+	color: #000;
+	text-decoration: none;
+	position: relative;
+}
+
+.uslugi .uslugi__block ul li a:hover {
+	color: #c8432f;
+}
+
+.uslugi .uslugi__block--one {
+	position: relative;
+}
+
+.uslugi .uslugi__block--one::after {
+	content: "";
+	width: 1px;
+	height: 100%;
+	background-color: #ede9e9;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.uslugi .uslugi__block--one ul li a {
+	display: flex;
+	align-items: center;
+	padding-right: 6%;
+}
+
+.uslugi .uslugi__block--one ul li a span {
+	width: 69px;
+	margin-right: 20px;
+	flex-shrink: 0;
+	overflow: hidden;
+}
+
+
+
+
+.uslugi .uslugi__block--two ul li a {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-left: 6%;
+}
+
+.uslugi .uslugi__block--two ul li a span {
+	width: 69px;
+	margin-right: 20px;
+	flex-shrink: 0;
+	overflow: hidden;
+	order: 1;
+}
+
+.uslugi .uslugi__block ul li a:hover img {
+	left: -69px;
+	position: relative;
+}
+
+
+.uslugi .uslugi__block--one ul li a::after,
+.uslugi .uslugi__block--two ul li a::after {
+	content: "";
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	border: 1px solid #ede9e9;
+	background-color: #ffffff;
+	display: block;
+	position: absolute;
+	right: -3px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition-duration: 0.3s;
+	z-index: 2;
+}
+
+.uslugi .uslugi__block--two ul li a::after {
+	right: auto;
+	left: -4px;
+}
+
+.uslugi .uslugi__block--one ul li a:hover::after,
+.uslugi .uslugi__block--two ul li a:hover::after {
+	border-color: #c8432f;
+	z-index: 4;
+}
+
+.uslugi .uslugi__block--one ul li a::before,
+.uslugi .uslugi__block--two ul li a::before {
+	content: "";
+	width: 1px;
+	height: 100%;
+	border-color: #ede9e9;
+	display: block;position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	transition-duration: 0.3s ;
+}
+
+
+.uslugi .uslugi__block--two ul li a::before {
+	left: -1px;
+	right: auto;
+
+}
+
+.uslugi .uslugi__block--one ul li a:hover::before,
+.uslugi .uslugi__block--two ul li a:hover::before {
+	background: linear-gradient(to bottom,  #ede9e9 0%, #c8432f 50%, #c8432f 50%, #ede9e9 100%);
+	z-index: 3;
+}
+
+.uslugi .uslugi__block ul li:last-child {
+	margin-bottom: 0;
+}
+
+
+
+.opacity {
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100%;
+	z-index: -9998;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+}
+
+
+.opacity--active {
+	display: block;
+	z-index: 9998;
+}
+
+.modal {
+	width: 748px;
+	height: 40%;
+	position: fixed;
+	overflow-y: auto;
+	background-color: #fff;
+	z-index: -9999;
+	left: 50%;
+	top: 25%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	box-sizing: border-box;
+	display: none;
+}
+
+.modal--active {
+	display: block;
+	z-index: 9999;
+}
+
+.modal__close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: #000000;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.modal p {
+	margin: 15px 0;
+	font-size: 15px;
+	line-height: 19px;
+}

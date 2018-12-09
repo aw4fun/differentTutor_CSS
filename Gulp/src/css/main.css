@@ -1,0 +1,8 @@
+a{
+    font-size: 18px;
+    border: 1px solid #dd77dd;
+}
+
+.row {
+    display: flex;
+}
