@@ -1,0 +1,89 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: url("../../build/img/brown.jpg") no-repeat 50% 50%;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+nav {
+	position: relative;
+	width: 100%;
+	padding: 0 80px;
+	background: #262626;
+	box-sizing: border-box;
+
+	& ul {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		float: right;
+		
+		& li {
+			list-style: none;
+			display: inline-block;
+			
+			& a {
+				display: block;
+				color: #ffffff;
+				text-decoration: none;
+				padding: 20px;
+				font-weight: bold;
+				
+				&.active,
+				&:hover {
+					color: #262626;
+					background: #ff0;
+				}
+			}
+		}
+	}
+}
+
+.toggle {
+	width: 100%;
+	background: #262626;
+	padding: 20px;box-sizing: border-box;
+	text-align: right;
+	display: none;
+	
+	& span {
+		color: #262626;
+		background: #ff0;
+		padding: 5px 10px;
+		cursor: pointer;
+		font-weight: bold;
+		
+	}
+	
+}
+
+
+
+@media (max-width: 767px) {
+	.toggle {
+		display: block;
+	}
+	
+	nav {
+		padding: 0;
+		
+		& ul {
+			float: none;
+			text-align: center;
+			display: none;
+			&.active {
+				display: block;
+			}
+			
+			
+			& li {
+				display: block;
+
+			}
+		}
+	}
+	
+	
+}
