@@ -1,0 +1,165 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: url("../../build/img/brown.jpg") no-repeat 50% 50% ;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 100px;
+	background: #262626;
+	width: 100% ;
+	box-sizing: border-box;
+	
+	& .logo {
+		color: #ffffff;
+		height: 50px;
+		line-height: 50px;
+		font-size: 24px;
+		float: left;
+		font-weight: bold;
+	}
+		
+		& nav {
+			float: right;
+			min-width: 110px;
+	
+		
+		& ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			
+			& li {
+				list-style: none;
+				position: relative;
+				
+				&.sub-menu {
+					
+					&.active {
+						
+						&:before {
+							content: '\25b4';
+						}
+					}
+					
+					&:before {
+						content: "\25be";
+						font-family: fontAwesome;
+						line-height: 50px;
+						position: absolute;
+						color: #ffffff;
+						right: 5px;
+					}
+				}
+				
+				&.active {
+					
+					& ul {
+						display: block;
+						
+					}
+				}
+				
+				& ul {
+					position: absolute;
+					left: 0;
+					background: #333333;
+					display: none;
+					
+					& li {
+						display: block;
+						width: 200px;
+					}
+					
+				}
+				
+				& a {
+					height: 50px;
+					line-height: 50px;
+					padding: 0 20px;
+					color: #ffffff;
+					text-decoration: none;
+					display: inline-block;
+					
+					&.active,
+					&:hover {
+						color: #ffffff;
+						background: #2196f3;
+	
+					}
+				}
+			}
+		}
+	}
+}
+
+.menu-toggle {
+	color: #ffffff;
+	float: right;
+	line-height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+	display: none;
+}
+
+@media (max-width: 991px) {
+	
+	.menu-toggle {
+		display: block;
+	}
+	
+	header {
+		padding: 0 20px;
+		
+		& nav {
+
+			position: absolute;
+			width: 40%;
+			height: calc(100vh - 50px); // 50px - размер макушки с logo
+			background: #333333;
+			top: 50px;
+			left: -100%;
+			transition: 0.5s;
+			
+			&.active {
+				left: 0;
+			}
+			
+			& ul {
+
+				display: block;
+				
+				& li {
+					
+					&.active {
+						
+						& ul {
+							position: relative;
+							background: #003e6f;
+							
+							& li {
+								width: 100%;
+							}
+							
+						}
+					}
+					
+					& a {
+						width: 100%;
+						border-bottom: 1px solid rgba(0,0,0,0.2);
+					}
+				}
+			}
+		}
+	}
+}

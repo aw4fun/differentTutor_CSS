@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: url("../../build/img/brown.jpg") no-repeat 50% 50%;
+  background-attachment: fixed;
+  background-position: center; }
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  background: #262626;
+  width: 100%;
+  box-sizing: border-box; }
+  header .logo {
+    color: #ffffff;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    float: left;
+    font-weight: bold; }
+  header nav {
+    float: right;
+    min-width: 110px; }
+    header nav ul {
+      margin: 0;
+      padding: 0;
+      display: flex; }
+      header nav ul li {
+        list-style: none;
+        position: relative; }
+        header nav ul li.sub-menu.active:before {
+          content: '\25b4'; }
+        header nav ul li.sub-menu:before {
+          content: "\25be";
+          font-family: fontAwesome;
+          line-height: 50px;
+          position: absolute;
+          color: #ffffff;
+          right: 5px; }
+        header nav ul li.active ul {
+          display: block; }
+        header nav ul li ul {
+          position: absolute;
+          left: 0;
+          background: #333333;
+          display: none; }
+          header nav ul li ul li {
+            display: block;
+            width: 200px; }
+        header nav ul li a {
+          height: 50px;
+          line-height: 50px;
+          padding: 0 20px;
+          color: #ffffff;
+          text-decoration: none;
+          display: inline-block; }
+          header nav ul li a.active, header nav ul li a:hover {
+            color: #ffffff;
+            background: #2196f3; }
+
+.menu-toggle {
+  color: #ffffff;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; }
+
+@media (max-width: 991px) {
+  .menu-toggle {
+    display: block; }
+  header {
+    padding: 0 20px; }
+    header nav {
+      position: absolute;
+      width: 40%;
+      height: calc(100vh - 50px);
+      background: #333333;
+      top: 50px;
+      left: -100%;
+      transition: 0.5s; }
+      header nav.active {
+        left: 0; }
+      header nav ul {
+        display: block; }
+        header nav ul li.active ul {
+          position: relative;
+          background: #003e6f; }
+          header nav ul li.active ul li {
+            width: 100%; }
+        header nav ul li a {
+          width: 100%;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2); } }
