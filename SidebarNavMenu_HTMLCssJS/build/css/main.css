@@ -12,9 +12,13 @@ body {
   width: 50%;
   height: 100%;
   background: rgba(0, 0, 0, 0.95);
-  transition: 0.5s; }
+  transition: 1s; }
   .sidebar.active {
     left: 0; }
+    .sidebar.active ul {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      transition-delay: 0.4s; }
     .sidebar.active .toggle:before {
       -webkit-transform: rotate(225deg);
       transform: rotate(225deg);
@@ -22,7 +26,9 @@ body {
   .sidebar ul {
     margin: 0;
     transition: 0.5s;
-    padding: 40px; }
+    padding: 40px;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); }
     .sidebar ul li {
       list-style: none; }
       .sidebar ul li a {
@@ -44,9 +50,9 @@ body {
             transform: scaleX(1);
             -webkit-transform-origin: left;
             transform-origin: left;
-            transition: -webkit-transform 0.5s;
-            transition: transform 0.5s;
-            transition: transform 0.5s, -webkit-transform 0.5s; }
+            transition: -webkit-transform 0.8s;
+            transition: transform 0.8s;
+            transition: transform 0.8s, -webkit-transform 0.8s; }
         .sidebar ul li a:before {
           content: "";
           bottom: 0;
