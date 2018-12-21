@@ -8,8 +8,7 @@ body {
   position: relative;
   width: 1200px;
   height: 600px;
-  margin: 80px auto 0;
-  background: #262626; }
+  margin: 80px auto 0; }
   .container .box {
     position: relative;
     width: calc(400px - 30px);
@@ -103,3 +102,32 @@ body {
       transform: scaleX(0);
       opacity: 0;
       z-index: 1; }
+
+@media (max-width: 1200px) {
+  .container {
+    width: 800px;
+    height: auto;
+    margin: 80px auto 80px; }
+    .container .box {
+      width: calc(400px - 30px);
+      height: calc(300px - 30px); } }
+
+@media (max-width: 800px) {
+  .container {
+    width: 600px;
+    height: auto;
+    margin: 80px auto 80px; }
+    .container .box {
+      width: calc(300px - 30px);
+      height: calc(225px - 30px); } }
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    height: auto;
+    margin: 80px auto 80px; }
+    .container .box {
+      width: calc(300px - 30px);
+      height: calc(225px - 30px);
+      margin: 15px auto;
+      float: none; } }
