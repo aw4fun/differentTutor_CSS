@@ -2,72 +2,172 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
+	background: #cccccc;
 }
+
+.container {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	background: #fff;
+	padding: 20px;
+	box-sizing: border-box;
+	min-height: 400px;
+}
+
+.full-width {
+	width: 100%;
+}
+
+
+.toggle {
+	position: relative;
+	text-align: right;
+	margin: 15px 0 -20px 0;
+	background: #262626;
+	padding: 15px;
+	color: #ffffff;
+	border-radius: 4px;
+	font-size: 20px;
+	display: none;
+	
+	&.active {
+		display: block;
+		border-radius: 4px 4px 0 0 ;
+	}
+
+}
+
 
 nav {
 	width: 100%;
-	background: #00316b;
-	
-	& ul {
-			width: 80%;
-			margin: 0 auto;
-			padding: 0;
+}
 
+nav ul {
+	margin: 20px 0 0;
+	padding: 0;
+	border-radius: 4px;
+	background: #262626;
+	overflow: hidden;
+	
+	&.active {
+		border-radius: 0 0 4px 4px;
 	}
 }
 
 
-li {
-	list-style: none;
+
+
+nav ul li {
 	display: inline-block;
-	padding: 20px;
-	
-	&:hover {
-		background: #e91e63;
-	}
-	
-	& a {
-		
-		color: #ffffff;
-		text-decoration: none;
-	}
+	list-style: none;
 }
 
-.toggle {
-	width: 100%;
-	padding: 10px 20px;
-	text-align: right;
-	background: #001f44;
-	box-sizing: border-box;
+
+
+nav ul li a {
+	display: block;
+	text-decoration: none;
 	color: #ffffff;
-	font-size: 30px;
-	display: none;
+	padding: 15px 20px;
+	
+	&.active,
+	&:hover {
+		background: #fd0;
+	}
 }
 
 
 
-@media (max-width: 768px) {
+img {
+	width: 100%;
+}
+
+.col-7 {
+	width: 70%;
+	min-height: 400px;
+	//background: #cccccc;
+	float: left;
+}
+
+.col-3 {
+	width: 28%;
+	min-height: 400px;
+	background: #f1f1f1;
+	float: right;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.col-3 ul {
+	margin: 0;
+	padding: 0;
+}
+
+.col-3 ul li {
+	list-style: none;
+	padding: 8px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	&:hover {
+		background: bisque;
+		color: saddlebrown;
+	}
+}
+
+.margin-top20px {
+	margin-top: 20px;
+}
+
+.post {
+	//background: #cccccc;
+	padding: 20px;
+	background: #f1f1f1;
+}
+
+.img {
+	width: 100%;
+	height: 10vh;
+}
+
+h1 {
+	margin: 10px 0;
+}
+
+footer {
+	padding-top: 20px;
+	text-align: center;
+}
+
+
+
+
+
+@media (max-width: 900px) {
+		.container {
+			width: 100%;
+		}
+	
 	.toggle {
 		display: block;
 	}
 	
-	ul {
+	nav ul li {
 		display: none;
-		width: 100%;
-		
-		& li {
-			display: block;
-			text-align: center;
-		}
+		text-align: center;
 	}
 	
-	
-	
-	.active {
+	nav ul.active li {
 		display: block;
 	}
+	
+	.col-7,
+	.col-3 {
+		width: 100%;
+		float: none;
+	}
+	
+	.col-3 {
+		margin-top: 20px;
+	}
 }
-
-
-
 

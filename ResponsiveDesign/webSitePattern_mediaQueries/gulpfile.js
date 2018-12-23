@@ -45,5 +45,5 @@ function watch(){
 }
 
 gulp.task("watch", watch);
-gulp.task("build", gulp.parallel(toCSS, toHTML, toJS));
+gulp.task("build", gulp.series(toCSS, toHTML, toJS));
 gulp.task("dev", gulp.series("build", "watch"));
