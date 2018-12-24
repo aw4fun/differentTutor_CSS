@@ -11,7 +11,7 @@ function toCSS() {
             .pipe(scss())
             .pipe(concat("./main.css")) // merge files to main_p1.css
             .pipe(autoprefixer({ // make auto prefix
-                browsers: ['> 0.3%'],
+                browsers: ['> 0.1%'],
                 cascade: false
             }))
             .pipe(gulp.dest("./build/css")) // where
