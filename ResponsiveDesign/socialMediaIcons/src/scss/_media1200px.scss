@@ -1,0 +1,42 @@
+@media (max-width: 1200px) {
+	.container {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+	
+
+}
+
+@media (max-width: 1024px) {
+	.container h1 {
+		font-size: 36px;
+	}
+	
+	.container ul li{
+		width: 25%;
+	}
+}
+
+@media (max-width: 768px) {
+	.container ul li {
+		width: 50%;
+	}
+	
+	.container h1 {
+		font-size: 28px;
+	}
+}
+
+
+@media (max-width: 380px) {
+	.container {
+		margin: 0;
+		padding: 0;
+	}
+	
+	.container ul li {
+
+		width: 100%;
+	}
+}
