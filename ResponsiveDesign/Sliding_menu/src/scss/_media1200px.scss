@@ -1,0 +1,48 @@
+@media (max-width: 900px) {
+	nav {
+		display: none;
+		padding: 0;
+	}
+	
+	
+	
+	nav h1 {
+		text-align: left;
+	}
+	
+	nav ul {
+		text-align: center;
+		width: 100%;
+	}
+	
+	nav ul li {
+		box-sizing: border-box;
+		width: 100%;
+		display: block;
+		padding: 15px 20px;
+		background: #141e33;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+	
+	nav ul li:last-child {
+		border-bottom: none;
+	}
+	
+	.responsive-bar {
+		display: flex;
+	}
+	
+	
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 380px) {
+
+}

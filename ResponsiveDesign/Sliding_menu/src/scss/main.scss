@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", cursive;
+	background: #ffffff;
+}
+
+nav {
+	width: 100%;
+	background: #202c45;
+	padding: 0 20px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+nav h1 {
+	margin: 0;
+	padding: 15px 20px;
+	//float: left;
+}
+
+nav h1 a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	//float: right;
+}
+
+nav ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 20px 30px;
+	transition: 0.5s;
+}
+
+nav ul li a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+nav ul li:hover {
+	background: #f2184f;
+}
+
+.responsive-bar {
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	background: #202c45;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	display: none;
+}
+
+.responsive-bar h3 {
+	margin: 0;
+	padding: 3px 0;
+	color: #ffffff;
+}
+
+.responsive-bar h3 a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.responsive-bar h4 {
+	margin: 0;
+	padding: 5px 10px;
+	color: #ffffff;
+	background: #f2184f;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+
+
+
+.active {
+	display: flex;
+	flex-direction: column;
+}
+
+nav.active h1 {
+	
+	display: none;
+}
+
+
+
+
+
+@import "media1200px";

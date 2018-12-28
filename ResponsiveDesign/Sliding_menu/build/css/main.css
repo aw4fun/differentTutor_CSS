@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,900");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", cursive;
+  background: #ffffff; }
+
+nav {
+  width: 100%;
+  background: #202c45;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+
+nav h1 {
+  margin: 0;
+  padding: 15px 20px; }
+
+nav h1 a {
+  color: #ffffff;
+  text-decoration: none; }
+
+nav ul {
+  margin: 0;
+  padding: 0; }
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 20px 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none; }
+
+nav ul li:hover {
+  background: #f2184f; }
+
+.responsive-bar {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  background: #202c45;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  display: none; }
+
+.responsive-bar h3 {
+  margin: 0;
+  padding: 3px 0;
+  color: #ffffff; }
+
+.responsive-bar h3 a {
+  color: #ffffff;
+  text-decoration: none; }
+
+.responsive-bar h4 {
+  margin: 0;
+  padding: 5px 10px;
+  color: #ffffff;
+  background: #f2184f;
+  text-transform: uppercase;
+  cursor: pointer; }
+
+.active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+
+nav.active h1 {
+  display: none; }
+
+@media (max-width: 900px) {
+  nav {
+    display: none;
+    padding: 0; }
+  nav h1 {
+    text-align: left; }
+  nav ul {
+    text-align: center;
+    width: 100%; }
+  nav ul li {
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    padding: 15px 20px;
+    background: #141e33;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  nav ul li:last-child {
+    border-bottom: none; }
+  .responsive-bar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex; } }
