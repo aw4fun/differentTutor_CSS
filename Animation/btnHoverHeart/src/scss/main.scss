@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #f1f1f1;
+	font-family: "Dancing Script", cursive;
+}
+
+#btn {
+	width: 200px;
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #ffc107;
+	border-radius: 5px;
+	cursor: pointer;
+	overflow: hidden;
+	
+	&:before {
+		color: #ffffff;
+		content: "Hover Me";
+		font-weight: 700;
+		position:absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 20px;
+		transition: all 0.5s;
+	}
+	
+	&:hover:before {
+		top: -30px;
+	}
+	
+	&:after {
+		content: "♥";
+		font-size: 40px;
+		color: red;
+		position: absolute;
+		top: 140%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: all 0.5s;
+	}
+	
+	&:hover:after {
+		top: 50%;
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+@import "media1200px";
