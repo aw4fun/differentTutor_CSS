@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script:400,700");
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../../build/img/brown.jpg") no-repeat center center;
+  font-family: "Dancing Script", cursive; }
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  background: #1dabd1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 73px 30px;
+  font-size: 20px;
+  border-radius: 50%;
+  text-transform: uppercase;
+  -webkit-animation: animate 2s linear infinite;
+  animation: animate 2s linear infinite; }
+
+a:hover {
+  -webkit-animation: none;
+  animation: none; }
+
+@-webkit-keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(29, 171, 209, 0.6), 0 0 0 0 rgba(29, 171, 209, 0.6); }
+  30% {
+    box-shadow: 0 0 0 50px rgba(29, 171, 209, 0), 0 0 0 0 rgba(29, 171, 209, 0.6); }
+  65% {
+    box-shadow: 0 0 0 50px rgba(29, 171, 209, 0), 0 0 0 30px rgba(29, 171, 209, 0); }
+  100% {
+    box-shadow: 0 0 0 0 rgba(29, 171, 209, 0), 0 0 0 3px rgba(29, 171, 209, 0); } }
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(29, 171, 209, 0.6), 0 0 0 0 rgba(29, 171, 209, 0.6); }
+  30% {
+    box-shadow: 0 0 0 50px rgba(29, 171, 209, 0), 0 0 0 0 rgba(29, 171, 209, 0.6); }
+  65% {
+    box-shadow: 0 0 0 50px rgba(29, 171, 209, 0), 0 0 0 30px rgba(29, 171, 209, 0); }
+  100% {
+    box-shadow: 0 0 0 0 rgba(29, 171, 209, 0), 0 0 0 3px rgba(29, 171, 209, 0); } }
