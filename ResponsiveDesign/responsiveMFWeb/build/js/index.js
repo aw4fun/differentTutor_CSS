@@ -1,26 +1,11 @@
-//
-// $("view-work").on("click", function () {
-//
-// 	const images = $("#images").position().top;
-//
-// 	$("html, body").animate(
-// 		{
-// 			scrollTop: images
-// 		},
-// 		900
-// 	);
-// });
-
-
-window.onload = function () {
-	let images = document.querySelector("#image");
-	let view = document.querySelector("#view-work");
-
-	view.addEventListener("click", function f() {
-
-
-		window.scrollTo(images);
+scrollTo = (element) => {
+	window.scroll({
+		behavior: 'smooth',
+		left: 0,
+		top: element.offsetTop
 	});
-
-
 };
+
+document.getElementById("view-work").addEventListener('click', () => {
+	scrollTo(document.getElementById("images"));
+});

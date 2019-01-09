@@ -1,30 +1,11 @@
-//
-//
-// let btn = document.querySelector(".btn");
-// let menu = document.querySelector(".menu");
-//     btn.addEventListener("click", () => {
-//         menu.classList.toggle("show");
-//     });
-//
-//
-//
-// let menu = document.querySelector(".toggle");
-// let ul = document.querySelector("ul");
-//
-//     menu.addEventListener("click", function () {
-//         ul.classList.toggle("active");
-//         menu.classList.toggle("active");
-//     });
+scrollTo = (element) => {
+	window.scroll({
+		behavior: 'smooth',
+		left: 0,
+		top: element.offsetTop
+	});
+};
 
-
-$("view--work").on("click", function () {
-
-	const images = $("#images").position().top;
-
-	$("html, body").animate(
-		{
-			scrollTop: images
-		},
-		900
-	);
+document.getElementById("view-work").addEventListener('click', () => {
+	scrollTo(document.getElementById("images"));
 });

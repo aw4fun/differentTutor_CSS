@@ -71,7 +71,8 @@ main {
   text-decoration: none;
   color: #333333;
   -webkit-transition: background 0.5s ease;
-  transition: background 0.5s ease; }
+  transition: background 0.5s ease;
+  outline: none; }
 
 .btn:hover {
   background: #f4f4f4; }
