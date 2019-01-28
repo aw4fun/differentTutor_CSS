@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Dancing Script", cursive;
+  background: #333333; }
+
+.container {
+  width: 1200px;
+  margin: 20px auto;
+  -webkit-columns: 4;
+  columns: 4;
+  -webkit-column-gap: 40px;
+  column-gap: 40px;
+  color: #ffffff; }
+
+.container .box {
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 10px;
+  background: #ffffff;
+  overflow: hidden;
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid; }
+
+.container .box img {
+  max-width: 100%; }
+
+.container .box h2 {
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 20px; }
+
+.container .box p {
+  margin: 0;
+  padding: 0 0 10px;
+  font-size: 16px;
+  color: #000000; }
+
+@media (max-width: 1200px) {
+  .container {
+    -webkit-columns: 3;
+    columns: 3;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    padding: 20px 20px 20px 0; } }
+
+@media (max-width: 768px) {
+  .container {
+    -webkit-columns: 2;
+    columns: 2; } }
+
+@media (max-width: 480px) {
+  .container {
+    -webkit-columns: 1;
+    columns: 1; } }
