@@ -1,6 +1,7 @@
 html,
 body {
   font: 15px/1.5 Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4; }
@@ -17,12 +18,13 @@ ul {
   display: flex; }
 
 .button_1 {
-  height: 38px;
+  height: 25px;
   background: #e8491d;
   border: 0;
   padding-left: 20px;
   padding-right: 20px;
-  color: #ffffff; }
+  color: #ffffff;
+  border-radius: 3px; }
 
 .dark {
   padding: 15px;
@@ -50,6 +52,7 @@ header li {
 
 header .container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between; }
 
 header .highlight,
@@ -64,7 +67,7 @@ header a:hover {
 #showcase {
   min-height: 400px;
   width: 100%;
-  background: url("https://source.unsplash.com/random") no-repeat 0 -100px;
+  background: url("https://source.unsplash.com/random") no-repeat;
   background-size: cover;
   text-align: center;
   color: #ffffff; }
@@ -94,7 +97,15 @@ h3, h2, h1 {
 #newsletter input[type="email"] {
   padding: 4px;
   height: 25px;
-  width: 250px; }
+  width: 250px;
+  outline: none;
+  border: none;
+  border-radius: 3px; }
+
+#newsletter input[type="email"],
+.quote input,
+.quote textarea {
+  box-sizing: border-box; }
 
 /* Boxes */
 #boxes {
@@ -113,10 +124,10 @@ h3, h2, h1 {
   width: 90px;
   height: 90px; }
 
-/* Sidebar*/
+/* Sidebar */
 aside#sidebar .quote input,
 aside#sidebar .quote textarea {
-  width: 90%;
+  width: 100%;
   padding: 5px; }
 
 #main .container {
@@ -151,4 +162,51 @@ footer {
   background-color: #e8491d;
   text-align: center; }
 
-/*Media Queries*/
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  /* Header */
+  header .container {
+    flex-direction: column;
+    width: 100%;
+    text-align: center; }
+  header .container ul {
+    justify-content: space-around; }
+  /* Showcase */
+  #showcase h2 {
+    margin-top: 40px; }
+  /* Newsletter */
+  #newsletter .container {
+    flex-direction: column; }
+  #newsletter .container h2,
+  #newsletter .container form,
+  .quote {
+    text-align: center; }
+  #newsletter input[type="email"],
+  .quote input,
+  .quote textarea {
+    box-sizing: border-box;
+    padding: 4px;
+    height: 26px;
+    width: 100%;
+    border-radius: 3px;
+    outline: none;
+    border: none; }
+  .button_1 {
+    width: 100%; }
+  /* Boxes */
+  #boxes .container {
+    width: 80%;
+    flex-direction: column; }
+  #boxes .box {
+    width: 100%;
+    padding: 0; }
+  /* Main */
+  #main .container {
+    flex-direction: column; }
+  #main .container article,
+  #main .container aside {
+    width: 100%; }
+  .dark h3 {
+    text-align: center; }
+  h3, h2, h1 {
+    text-align: center; } }
