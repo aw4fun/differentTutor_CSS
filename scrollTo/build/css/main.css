@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script:400,700");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Dancing Script", cursive; }
+
+.sidebar {
+  width: 100%;
+  position: fixed;
+  left: calc(-100% + 50px);
+  height: 100%;
+  background: #262626;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 2; }
+
+.sidebar.active {
+  width: 50%;
+  left: 0; }
+
+.toggleBar {
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  right: 0;
+  background: #2196f3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.toggleBar .toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer; }
+
+.toggleBar .toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #ffffff;
+  margin: 7px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.toggleBar .toggle.close span:nth-child(1) {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.toggleBar .toggle.close span:nth-child(3) {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.toggleBar .toggle.close span:nth-child(2) {
+  -webkit-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  transform: translateX(100px);
+  opacity: 0; }
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.menu ul {
+  margin: 0;
+  padding: 0; }
+
+.menu ul li {
+  list-style: none;
+  margin: 20px 0;
+  overflow: hidden; }
+
+.menu ul li a {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 3em;
+  text-transform: uppercase;
+  padding: 0 20px;
+  width: 100%; }
+
+.menu ul li a:before {
+  content: '';
+  position: absolute;
+  left: -101%;
+  bottom: 0;
+  height: 20px;
+  width: 100%;
+  background: #2196f3;
+  z-index: -1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.menu ul li a:hover:before {
+  left: 0; }
+
+section {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100vh; }
+
+section.sec1 {
+  background: url("../../build/img/brown.jpg");
+  z-index: 1;
+  background-size: cover;
+  background-position: center; }
+
+section.sec2 {
+  padding: 50px 50px 50px 100px;
+  height: auto; }
+  section.sec2 h1 {
+    font-size: 5em;
+    margin: 0 0 20px; }
+
+section.sec3 {
+  background: url("../../build/img/brown.jpg");
+  background-size: cover;
+  background-position: center; }
+
+@media (max-width: 768px) {
+  section.sec1,
+  section.sec3 {
+    height: 50vh; }
+  section.sec2 {
+    padding: 40px 40px 40px 60px; }
+  section.sec2 h1 {
+    font-size: 3em;
+    margin: 0 0 20px; }
+  .menu ul li a {
+    font-size: 2em; } }
