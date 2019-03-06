@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+
+body {
+padding: 45px;
+	background-color: #010001;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 32px;
+	line-height: 40px;
+	padding: 30px;
+	margin-right: 60px;
+	color: #ffffff;
+}
+
+p span {
+	background-color: rgba(1, 0, 1, 0.85);
+}
+
+a {
+	color: #AFDBF2;
+}
+
+h1 {
+	text-transform: capitalize;
+	font-family: Arial, sans-serif;
+	font-size: 40px;
+	padding: 10px;
+	margin: 0;
+	background-color: rgba(178, 45, 0, 0.75);
+	color: #EEEEEE;
+}
+
+#parallaxContainer {
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+#parallaxContainer img {
+
+	height: 100%;
+
+}
