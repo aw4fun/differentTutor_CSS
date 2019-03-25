@@ -1,5 +1,9 @@
-let ul = document.querySelector("body");
-
-ul.addEventListener("click", () => {
-  console.log("Hello by new keyboard!!!");
-});
+window.onload = function () {
+  $(".gallery").magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery: {
+      enabled: true
+    }
+  });
+};
