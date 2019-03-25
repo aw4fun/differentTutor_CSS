@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+
+*{
+	padding: 0;
+}
+
+body {
+
+	background-color: #ffffff;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 32px;
+	line-height: 40px;
+	padding: 30px;
+	margin-right: 60px;
+	color: #ffffff;
+}
+
+p span {
+	background-color: rgba(1, 0, 1, 0.85);
+}
+
+a {
+	color: #AFDBF2;
+}
+
+input	{
+	border-radius: 3px;
+	border: 1px solid darkseagreen;
+}
+
+li {
+	list-style: none;
+}
+
+h1 {
+	text-transform: capitalize;
+	font-family: Arial, sans-serif;
+	font-size: 40px;
+	padding: 10px;
+	margin: 0;
+	background-color: rgba(178, 45, 0, 0.75);
+	color: #EEEEEE;
+}
+
+
+.hide {
+	display: none;
+}
