@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+	section.sec1,
+	section.sec3 {
+		height: 50vh;
+	}
+	
+	section.sec2 {
+		padding: 40px 40px 40px 60px;
+	}
+	
+	section.sec2 h1 {
+		font-size: 3em;
+		margin: 0 0 20px;
+	}
+	
+	.menu ul li a {
+		font-size: 2em;
+	}
+}
+
+@media (max-width: 800px) {
+
+}
+
+@media (max-width: 600px) {
+
+}
